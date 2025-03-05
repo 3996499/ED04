@@ -8,7 +8,7 @@ import java.util.List;
  * Clase que representa una agenda telefónica de contactos.
  */
 
-public class Agenda {
+public class Agenda implements Agenda_Interfaz {
     private List<Persona> contacts; // Lista de Persona
 
     /**
@@ -25,6 +25,7 @@ public class Agenda {
      * @param phone Número de teléfono del contacto.
      */
 
+    @Override
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Persona c : contacts) {
@@ -47,6 +48,7 @@ public class Agenda {
      * @param name Nombre del contacto a eliminar.
      */
 
+    @Override
     public void removeContact(String name) {
         Iterator<Persona> it = contacts.iterator();
 
@@ -67,6 +69,7 @@ public class Agenda {
      * @param newPhone Nuevo número de teléfono.
      */
 
+    @Override
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Persona c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
@@ -87,6 +90,7 @@ public class Agenda {
      * @return Lista de contactos.
      */
 
+    @Override
     public List<Persona> getContacts() {
         return this.contacts;
     }
