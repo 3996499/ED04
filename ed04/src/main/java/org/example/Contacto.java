@@ -11,6 +11,14 @@ class Contacto {
     private String name;
     private List<String> phones;
 
+    public void setPhones(List<String> phones) {
+        this.phones = phones;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
      * Constructor que crea un contacto con un nombre y un número de teléfono.
      * @param name Nombre del contacto
